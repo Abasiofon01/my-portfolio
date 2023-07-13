@@ -1,0 +1,44 @@
+// app global css in SCSS form
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply tw-text-gray-500;
+  // @apply bg-gradient-to-l from-gray-800 to-gray-900;
+  @apply tw-bg-gradient-to-l tw-from-gray-800 tw-to-gray-900;
+}
+
+/* Default styles for inputs */
+[type="text"],
+[type="email"],
+[type="url"],
+[type="password"],
+[type="number"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="week"],
+[multiple],
+textarea,
+select {
+  @apply tw-block;
+  @apply tw-w-full;
+  @apply tw-rounded-lg;
+  @apply tw-bg-white;
+  @apply tw-border-gray-200;
+  @apply tw-border-2;
+  @apply tw-py-3;
+  @apply tw-shadow-none;
+  @apply tw-text-gray-600;
+  @apply focus:tw-border-transparent;
+  @apply focus:tw-ring-2;
+  @apply focus:tw-ring-indigo-600 tw-placeholder-gray-300;
+}

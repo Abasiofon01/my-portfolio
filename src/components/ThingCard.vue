@@ -3,10 +3,10 @@
     :href="href"
     rel="noreferrer"
     target="_blank"
-    :class="`tw-p-2 tw-rounded-xl tw-text-gray-400 tw-bg-gray-800 hover:tw-bg-${background} hover:tw-shadow-xl tw-transition-all tw-flex tw-items-center`"
+    :class="`tw-p-2 tw-rounded-xl tw-text-neutral-400 tw-bg-neutral-800 hover:tw-bg-${background} hover:tw-shadow-xl tw-transition-all tw-flex tw-items-center`"
   >
     <span
-      class="tw-inline-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 md:tw-w-11 md:tw-h-11 tw-bg-gray-800 tw-rounded-lg tw-mr-3 tw-shrink-0"
+      class="tw-inline-flex tw-items-center tw-justify-center tw-w-8 tw-h-8 md:tw-w-11 md:tw-h-11 tw-bg-neutral-800 tw-rounded-lg tw-mr-3 tw-shrink-0"
       :style="{ backgroundColor: background }"
     >
       <span class="tw-relative tw-w-4 tw-h-4 md:tw-w-6 md:tw-h-6">
@@ -15,7 +15,7 @@
     </span>
 
     <h4
-      class="tw-text-sm md:tw-text-base lg:tw-text-lg tw-font-bold tw-text-gray-200 tw-truncate"
+      class="tw-text-sm md:tw-text-base lg:tw-text-lg tw-font-bold tw-text-neutral-200 tw-truncate"
     >
       {{ title }}
     </h4>

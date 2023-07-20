@@ -39,8 +39,8 @@ export default {
   computed: {
     getLinkClasses() {
       return [
-        "tw-text-gray-600",
-        "hover:tw-bg-gray-700",
+        "tw-text-neutral-600",
+        "hover:tw-bg-neutral-700",
         "hover:tw-text-white",
         "tw-p-3",
         "tw-rounded-full",

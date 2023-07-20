@@ -1,6 +1,6 @@
 <template>
   <div class="tw-mb-7">
-    <h2 class="tw-text-3xl md:tw-text-4xl tw-font-bold tw-text-gray-300">
+    <h2 class="tw-text-3xl md:tw-text-4xl tw-font-bold tw-text-neutral-300">
       {{ title }}
     </h2>
     <p v-if="subtitle" class="tw-mt-2 tw-text-base md:tw-text-lg">

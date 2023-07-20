@@ -1,7 +1,7 @@
 <template lang="">
   <div>
     <h2
-      class="tw-text-2xl md:tw-text-3xl tw-font-bold tw-text-gray-500 tw-my-6 tw-inline-flex tw-items-center tw-group tw-cursor-default"
+      class="tw-text-2xl md:tw-text-3xl tw-font-bold tw-text-neutral-500 tw-my-6 tw-inline-flex tw-items-center tw-group tw-cursor-default"
     >
       Develop &nbsp;
       <svg
@@ -10,7 +10,7 @@
         viewBox="0 0 15 15"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
-        class="tw-w-4 tw-h-4 tw-mx-2 hover:tw-rotate-45 hover:tw-text-white tw-transition-transform"
+        class="tw-w-4 tw-h-4 tw-mx-2 hover:tw-rotate-45 hover:tw-text-neutral-300 tw-transition-transform"
         aria-label="+"
       >
         <path
@@ -27,7 +27,7 @@
         viewBox="0 0 15 15"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
-        class="tw-w-4 tw-h-4 tw-mx-2 hover:tw-rotate-45 hover:tw-text-white tw-transition-transform"
+        class="tw-w-4 tw-h-4 tw-mx-2 hover:tw-rotate-45 hover:tw-text-neutral-300 tw-transition-transform"
       >
         <path
           d="M3.1156 0.218033L15 11.9347L11.8909 15L0.00648402 3.28328L3.1156 0.218033Z"

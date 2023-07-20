@@ -25,7 +25,7 @@
         <q-btn
           fab
           icon="keyboard_arrow_up"
-          style="background-color: #5a649c; color: white"
+          style="background-color: #a3a3a3; color: #262626"
         />
       </q-page-scroller>
       <router-view />

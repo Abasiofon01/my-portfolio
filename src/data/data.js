@@ -19,7 +19,7 @@ export const tools = [
     id: 3,
     title: "SCSS",
     background: "#cf649a",
-    class: "hover:tw-bg-[#379ad6]",
+    class: "hover:tw-bg-[#cf649a]",
     icon: "/images/svgs/sass.svg",
     href: "https://nextjs.org/",
   },

@@ -47,7 +47,7 @@
         </div>
         <div class="tw-flex tw-self-center">
           <q-btn
-            label="View All"
+            label="All Projects"
             class="tw-bg-neutral-800 tw-text-neutral-300 tw-px-4 tw-py-2"
           >
             <q-icon class="q-ml-sm" name="las la-arrow-right"></q-icon>

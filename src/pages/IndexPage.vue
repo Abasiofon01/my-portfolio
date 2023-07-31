@@ -3,7 +3,7 @@
     class="tw-max-w-5xl tw-mx-auto tw-px-4 sm:tw-px-6 lg:tw-px-8 tw-mb-10"
   >
     <div
-      class="mt-28 tw-animate-fade-up tw-animate-duration-1000 tw-animate-delay-300"
+      class="tw-mt-28 tw-animate-fade-up tw-animate-duration-1000 tw-animate-delay-300"
     >
       <div>
         <TagLine />
@@ -26,35 +26,42 @@
 
     <div class="tw-mt-36">
       <SectionTitle title="Projects" />
-      <div class="tw-flex-col tw-gap-3 md:tw-gap-7 lg:tw-gap-9">
-        <ProjectCard
-          title="Food Site"
-          description="Receive donations and sell products in Bitcoins."
-          background="#2B5CEA"
-          image="/public/images/projects/meal_store_project.jpeg"
-          href="https://tipybit.com"
-        />
-        <ProjectCard
-          title="Sedelab"
+      <div class="projects-wrapper">
+        <div
+          v-for="project in projects"
+          :key="`${project.title}_${project.id}`"
+        >
+          <!-- <q-intersection
+            :root="listEl"
+            transition="scale"
+            transition-duration="300"
+          > -->
+          <ProjectCard
+            :title="project.title"
+            :description="project.description"
+            :image="project.image"
+            :href="project.href"
+            :tools="project.tools"
+          />
+          <!-- </q-intersection> -->
+        </div>
+        <!-- <ProjectCard
+          title="Analog Clock"
           description="Platform to pay for tickets and subscriptions to soccer teams."
-          background="#4A90E2"
-          image="/public/images/projects/meal_store_project.jpeg"
-          href="https://sedelab.com"
-        />
+          image="/public/images/projects/analog_clock.png"
+          href="https://lovely-analog-clock.netlify.app"
+        /> -->
       </div>
     </div>
-    <ProjectCarousel />
 
     <div class="tw-mt-36">
-      <q-intersection :root="listEl" transition="scale">
-        <SectionTitle title="Development" subtitle="Tools I work with" />
+      <SectionTitle title="Development" subtitle="Tools I work with" />
 
-        <h3
-          class="tw-border-b tw-border-neutral-800 tw-text-lg tw-font-bold tw-text-neutral-400 tw-pb-3 tw-mb-4"
-        >
-          Tools
-        </h3>
-      </q-intersection>
+      <h3
+        class="tw-border-b tw-border-neutral-800 tw-text-lg tw-font-bold tw-text-neutral-400 tw-pb-3 tw-mb-4"
+      >
+        Tools
+      </h3>
       <q-intersection
         :root="listEl"
         transition-duration="600"
@@ -109,10 +116,9 @@ import { defineComponent } from "vue";
 import TagLine from "src/components/TagLine.vue";
 import SocialIcons from "src/components/SocialIcons.vue";
 import SectionTitle from "src/components/SectionTitle.vue";
-import { tools, services } from "../data/data";
+import { tools, services, projects } from "../data/data";
 import ProjectCard from "src/components/ProjectCard.vue";
 import ThingCard from "src/components/ThingCard.vue";
-import ProjectCarousel from "src/components/ProjectCarousel.vue";
 import { ref, computed } from "vue";
 
 export default defineComponent({
@@ -123,29 +129,23 @@ export default defineComponent({
     SectionTitle,
     ProjectCard,
     ThingCard,
-    ProjectCarousel,
   },
 
   data() {
     return {
       tools: tools,
       services: services,
+      projects: projects,
       intersect: false,
+
+      myListRef: null,
     };
   },
-  setup() {
-    const myListRef = ref(null);
-
-    return {
-      myListRef,
-      listEl: computed(() => (myListRef.value ? myListRef.value.$el : null)),
-    };
+  computed: {
+    listEl() {
+      return this.myListRef ? this.myListRef.$el : null;
+    },
   },
 });
 </script>
-<style lang="scss" scoped>
-.example-item {
-  height: 290px;
-  width: 290px;
-}
-</style>
+<style lang="scss" scoped></style>

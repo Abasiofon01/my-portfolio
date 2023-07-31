@@ -171,3 +171,30 @@ export const services = [
     href: "https://nextjs.org/",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Food Site Landing Page",
+    description: "A food site landing Page",
+    image: "/public/images/projects/meal_store_project.jpeg",
+    href: "https://meal-store.netlify.app",
+    tools: ["HTML", "CSS", "Tailwind", "JavaScript"],
+  },
+  {
+    id: 2,
+    title: "Analog Clock",
+    description: "A simple analog clock",
+    image: "/public/images/projects/analog_clock.png",
+    href: "https://lovely-analog-clock.netlify.app",
+    tools: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 3,
+    title: "E-Commerce Landing Page",
+    description: "An E-commerce Landing Page",
+    image: "/public/images/projects/e_commerce_landing.png",
+    href: "https://i-shop-store.netlify.app",
+    tools: ["HTML", "CSS", "Bootstrap", "JavaScript"],
+  },
+];

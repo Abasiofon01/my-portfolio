@@ -9,7 +9,6 @@ html.dark {
 
 body {
   @apply tw-text-gray-500;
-  // @apply bg-gradient-to-l from-gray-800 to-gray-900;
   @apply tw-bg-gradient-to-l tw-from-neutral-900 tw-to-neutral-950;
 }
 
@@ -41,4 +40,10 @@ select {
   @apply focus:tw-border-transparent;
   @apply focus:tw-ring-2;
   @apply focus:tw-ring-indigo-600 tw-placeholder-gray-300;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }

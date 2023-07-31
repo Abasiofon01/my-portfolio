@@ -16,18 +16,18 @@
         >
 
         <div class="tw-pt-4 tw-pb-2">
-          <span
+          <!-- <span
             class="tw-inline-block tw-bg-neutral-200 tw-rounded-full tw-px-3 tw-py-1 tw-text-sm tw-font-semibold tw-text-neutral-700 tw-mr-2 mb-2"
-            >#photography</span
-          >
-          <span
-            class="tw-inline-block tw-bg-neutral-200 tw-rounded-full tw-px-3 tw-py-1 tw-text-sm tw-font-semibold tw-text-neutral-700 tw-mr-2 mb-2"
-            >#travel</span
-          >
-          <span
-            class="tw-inline-block tw-bg-neutral-200 tw-rounded-full tw-px-3 tw-py-1 tw-text-sm tw-font-semibold tw-text-neutral-700 tw-mr-2 mb-2"
-            >#fall</span
-          >
+            >#HTML</span
+          > -->
+          <div>
+            <span
+              v-for="tool in tools"
+              :key="tool"
+              class="tw-inline-block tw-bg-neutral-200 tw-rounded-full tw-px-3 tw-py-1 tw-text-sm tw-font-semibold tw-text-neutral-700 tw-mr-2 mb-2"
+              >#{{ tool }}</span
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -55,10 +55,13 @@ export default {
     },
     icon: {
       type: String,
-      required: true,
     },
     href: {
       type: String,
+      required: true,
+    },
+    tools: {
+      type: Array,
       required: true,
     },
   },
@@ -79,7 +82,7 @@ export default {
   position: absolute;
   inset: 0;
   // background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
-  transform: translate3d(0, 0, 0) scale(0.95);
+  // transform: translate3d(0, 0, 0) scale(0.95);
   filter: blur(20px);
 }
 
@@ -127,7 +130,7 @@ export default {
   border-radius: 5px;
   opacity: 0;
   // pointer-events: none;
-  // transform: translateY(50px);
+  transform: translateY(50px);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 
   @apply hover:tw-animate-fade-up;
@@ -135,13 +138,12 @@ export default {
 
 .card:hover .content {
   opacity: 1;
-  transform: translateY(0);
+  // transform: translateY(0);
 }
 
 .card:hover .img-content {
-  scale: 1.2;
+  // scale: 1.2;
   filter: blur(1px);
-  @apply tw-animate-fade;
 }
 
 .title {

@@ -45,12 +45,14 @@
           />
           <!-- </q-intersection> -->
         </div>
-        <!-- <ProjectCard
-          title="Analog Clock"
-          description="Platform to pay for tickets and subscriptions to soccer teams."
-          image="/public/images/projects/analog_clock.png"
-          href="https://lovely-analog-clock.netlify.app"
-        /> -->
+        <div class="tw-flex tw-self-center">
+          <q-btn
+            label="View All"
+            class="tw-bg-neutral-800 tw-text-neutral-300 tw-px-4 tw-py-2"
+          >
+            <q-icon class="q-ml-sm" name="las la-arrow-right"></q-icon>
+          </q-btn>
+        </div>
       </div>
     </div>
 

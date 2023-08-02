@@ -14,8 +14,6 @@
       </div>
     </header>
 
-    <FooterSection />
-
     <q-page-container>
       <q-page-scroller
         position="bottom-right"
@@ -30,6 +28,7 @@
       </q-page-scroller>
       <router-view />
     </q-page-container>
+    <FooterSection />
   </q-layout>
 </template>
 
@@ -43,7 +42,7 @@ export default defineComponent({
   name: "MainLayout",
 
   components: {
-    // FooterSection,
+    FooterSection,
     Logo,
   },
 });
